@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas javascript Function</title>
-    <script>
-        console.log("Saya Belajar JS");
-            document.write("Hello World!");
+<html>
+    <head>
+        <script>
+            //Membuat fungsi Hello()
+            /* 1. */ 
+            function Hello(){
+                 return alert('Hello Guys')
+            }
+            /* 2. */
+            function tampilNama(){
+                var nama = document.getElementById("nama").value
+                document.getElementById("tampil").innerHTML="Nama : "+nama
+
+            
+            }
         
         </script>
-</head>
-<body>
-    <script>
-    var namaFungsi = function(){
-    console.log("Helloasd World!");
-    }
-    var namaFungsi = () => {
-    console.log("Hello World!");
-}
+    </head>
 
-// atau seperti ini (jika isi fungsi hanya satu baris):
-var namaFungsi = () => console.log("Hello sadasWorld!");
-    </script>
-</body>
+    <body>
+        <select id="nama" OnChange="tampilNama()">
+            <option value="Tio">Tio</option>
+            <option value="Irfan">Irfan</option>
+            <option value="Antoni">Antoni</option>
+        </select>
+        <br> <br> <br>
+        <div id='tampil'></div>
+        <a href='Javascript:Hello()'>Klik Disini</a><br>
+        
+        <a href='#' onclick="Hello()">Klik Disini</a><br>
+<br>
+        <script>
+            //Memanggil fungsi Hello()
+            Hello()
+            //Membuat fungsi jumlah dengan parameter a dan b
+            function jumlah(a,b)
+                {
+                    return document.write('Hasil = '+(a+b))
+                }
+            //Memanggil fungsi jumlah       
+            jumlah(7,6)
+        </script>
+    </body>
 </html>
