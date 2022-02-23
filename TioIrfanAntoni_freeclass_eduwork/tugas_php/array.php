@@ -1,4 +1,12 @@
+<?php
 
+
+$json = file_get_contents('data.json');
+$data = json_decode($json, true)
+//  var_dump($data);
+//  die();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,82 +16,43 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-/* Fungsi Konversi nilai ke huruf */
-/* Created by Daniel Ok */
-
-function grade($nilai)
-(
- if($nilai <= 100 ) ( $grade = "A"; )
- if($nilai <  80 )  ( $grade = "B"; )
- if($nilai <  70 )  ( $grade = "C"; )
- if($nilai <  60 )  ( $grade = "D"; )
- if($nilai <  50 )  ( $grade = "E"; )
-
- return $grade;
-);
-?>
 
 <h2>Data Nilai </h2>
+	<table border='2' width='100%' bgcolor='yellow' cellspacing='1'>
 
-<table width="100%" bgcolor="grey" cellspacing="1">
- <tr bgcolor="white">
- <th width="25">No</th>
- <th width="100">Nama</th>
- <th width="100">Kelas</th>
- <th width="100">Alamat</th>
- <th width="100">Tanggal Lahir</th>
- <th width="100">Nilai</th>
- <th width="100">Grade</th>
- </tr>
- <?php
- $data = array (
-     "0" => array (
-		"nama" : "Pelita",
-		"kelas" : "Laravel",
-		"alamat" : "Bandung",
-		"tanggal_lahir" : "1997-12-27",
-		"nilai" : 90
-     ),
-	"1" => array (
-		"nama" : "Najmina",
-		"kelas" : "Vue JS",
-		"alamat" : "Jakarta",
-		"tanggal_lahir" : "1998-10-07",
-		"nilai" : 55
-    ),
-    "2" => array (
-		"nama" : "Anita",
-		"kelas" : "Design",
-		"alamat" : "Semarang",
-		"tanggal_lahir" : "1999-08-20",
-		"nilai" : 80
-    ),
-	"3" => array (
-		"nama" : "Bayu",
-		"kelas" : "Digital Marketing",
-		"alamat" : "Bandung",
-		"tanggal_lahir" : "1990-01-01",
-		"nilai" : 65
-	),
-	"4" => array (
-		"nama" : "Nasa",
-		"kelas" : "UI/UX Designer",
-		"alamat" : "Bandung",
-		"tanggal_lahir" : "1995-04-10",
-		"nilai" : 70
-	),
-	"5" => array(
-		"nama" : "Rahma",
-		"kelas" : "Node JS",
-		"alamat" : "Yogyakarta",
-		"tanggal_lahir" : "1993-09-15",
-		"nilai" : 85
-	)
-    );
-    $json = json_encode($data);
-    echo $json;
-?>
-https://tondanoweb.com/cara-melakukan-konversi-array-ke-json-dan-json-ke-array-pada-php/
+	 <th width='5'>No</th>
+	 <th width='100'>Nama</th>
+	 <th width='100'>Tanggal Lahir</th>
+	 <th width='100'>Umur</th>
+	 <th width='100'>Alamat</th>
+	 <th width='100'>Kelas</th>
+	 <th width='100'>Nilai</th>
+	 <th width='100'>Grade</th>
+
+	<?php $no = 1;
+	foreach ($data as $d ) ; ?>
+	<tr>
+		<td><?= $no; ?></td>
+		<td><?= $d["nama"]; ?> </td>
+		<td><?= $d["tanggal_lahir"]; ?> </td>
+		<td align="center"><?= date('Y') - date('Y', strtotime($d["tanggal_lahir"])); ?></td>
+		<td align="center"><?= $d["alamat"];?> </td>
+		<td align="center"><?= $d["kelas"];?> </td>
+		<td align="center"><?= $d["nilai"];?> </td>
+
+		<?php if ($d['nilai'] >= 90) : ?>
+			<td align="center">A</td>
+		<?php elseif ($d['nilai'] >= 80) : ?>
+			<td align="center">B</td>
+		<?php elseif ($d['nilai'] >= 70) : ?>
+			<td align="center">C</td>
+		<?php elseif ($d['nilai'] >= 60) : ?>
+			<td align="center">D</td>
+		<?php else : ?>
+			<td align="center">E</td>
+		<?php endif; ?>
+	</tr>
+<?php $no++; ?>
+
 </body>
 </html>
