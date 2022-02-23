@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Feb 2022 pada 13.02
+-- Waktu pembuatan: 23 Feb 2022 pada 16.39
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -41,8 +41,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id_customer`, `nama`, `no_hp`, `alamat`, `nomor_plat`, `type_mobil`) VALUES
-(1, 'Tio', '081383205359', 'Jl. Cipinang Pulo Maja Cipinang Besar Utara Rt.009', 'B 3537 TXN', 'Avanza'),
-(2, 'ijlkjsdf', '082193812938', 'asljdhalkdahfkqwef', 'b1293ask', 'Avanza');
+(1, 'Tio', '0895414744032', 'jakarta', ' b4547asd', 'Avanza'),
+(2, 'Anggre', '0895414744032', 'Tangerang', 'b1293ask', 'Innova'),
+(3, 'Arfan', '0895414744032', 'Tangerang', 'b1293ask', 'Innova'),
+(4, 'Eni Jumeias', '0895414744032', 'Jakarta', 'b4544asd', 'Avanza');
 
 -- --------------------------------------------------------
 
@@ -61,8 +63,8 @@ CREATE TABLE `jenis_cucian` (
 --
 
 INSERT INTO `jenis_cucian` (`id_jenis_cucian`, `jenis_cucian`, `biaya`) VALUES
-(2, 'Cucian Body', 35000),
-(5, 'Cucian Menyeluruh', 45000);
+(1, 'Cucian Body', 35000),
+(2, 'Cucian Menyeluruh', 45000);
 
 -- --------------------------------------------------------
 
@@ -86,8 +88,25 @@ CREATE TABLE `pendaftaran` (
 --
 
 INSERT INTO `pendaftaran` (`id_pendaftaran`, `no_antrian`, `id_customer`, `id_jenis_cucian`, `tgl_pendaftaran`, `jam_pendaftaran`, `total_biaya`, `status`) VALUES
-(6, '2022-02-19/6', 6, 2, '2022-02-19', '09:00:00', 45000, 'pendaftaran'),
-(7, '2022-02-19/7', 10, 2, '2022-02-21', '10:00:00', 45000, 'pendaftaran');
+(1, '2022-02-19/1', 1, 1, '2022-02-19', '09:42:00', 35000, 'Pendaftaran'),
+(2, '2022-02-19/2', 2, 2, '2022-02-19', '10:40:00', 45000, 'Pendaftaran'),
+(3, '2022-02-19/3', 3, 2, '2022-02-19', '11:40:00', 45000, 'Pendaftaran'),
+(4, '2022-02-19/4', 4, 1, '2022-02-19', '12:00:00', 35000, 'pendaftaran'),
+(5, '2022-02-19/5', 5, 2, '2022-02-19', '12:10:00', 45000, 'pendaftaran'),
+(6, '2022-02-19/6', 6, 1, '2022-02-19', '12:05:00', 35000, 'pendaftaran'),
+(7, '2022-02-19/7', 7, 2, '2022-02-19', '12:15:00', 45000, 'pendaftaran'),
+(8, '2022-02-19/8', 8, 1, '2022-02-19', '12:20:00', 35000, 'pendaftaran'),
+(9, '2022-02-19/9', 9, 2, '2022-02-19', '12:45:00', 45000, 'pendaftaran'),
+(10, '2022-02-19/10', 10, 1, '2022-02-19', '12:30:00', 35000, 'pendaftaran'),
+(11, '2022-02-19/11', 11, 1, '2022-02-19', '12:50:00', 35000, 'pendaftaran'),
+(12, '2022-02-19/12', 12, 1, '2022-02-19', '12:55:00', 35000, 'pendaftaran'),
+(13, '2022-02-19/13', 13, 2, '2022-02-19', '13:20:00', 45000, 'pendaftaran'),
+(14, '2022-02-19/14', 14, 1, '2022-02-19', '13:30:00', 35000, 'pendaftaran'),
+(16, '2022-02-19/16', 16, 1, '2022-02-19', '13:50:00', 35000, 'pendaftaran'),
+(17, '2022-02-19/17', 17, 2, '2022-02-19', '14:30:00', 45000, 'pendaftaran'),
+(18, '2022-02-19/18', 18, 1, '2022-02-19', '15:00:00', 35000, 'pendaftaran'),
+(19, '2022-02-19/19', 19, 2, '2022-02-19', '15:30:00', 45000, 'pendaftaran'),
+(20, '2022-02-19/19', 20, 1, '2022-02-19', '16:00:00', 35000, 'pendaftaran');
 
 -- --------------------------------------------------------
 
@@ -165,7 +184,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `alamat`, `hp`, `status`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'Jl. Bangau Sakti', '091823123', 1);
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'Jl. Bangau Sakti', '091823123', 1),
+(2, 'sityoy', '5dabef7c69cf1181b3d2ddadfdc798bc', 'Tio', 'askdjlaksdj', '081383205359', 1);
 
 --
 -- Indexes for dumped tables
@@ -221,7 +241,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_customer` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `jenis_cucian`
@@ -233,7 +253,7 @@ ALTER TABLE `jenis_cucian`
 -- AUTO_INCREMENT untuk tabel `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
-  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `saran`
@@ -257,7 +277,7 @@ ALTER TABLE `type_mobil`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
