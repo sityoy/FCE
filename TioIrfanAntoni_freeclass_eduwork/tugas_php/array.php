@@ -2,9 +2,9 @@
 
 
 $json = file_get_contents('data.json');
-$data = json_decode($json, true)
-//  var_dump($data);
-//  die();
+$data = json_decode($json, true);
+//   var_dump($data);
+//   die();
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ $data = json_decode($json, true)
 <body>
 
 <h2>Data Nilai </h2>
-	<table border='2' width='100%' bgcolor='yellow' cellspacing='1'>
+	<table border='1' width='100%' cellspacing='1'>
 
 	 <th width='5'>No</th>
 	 <th width='100'>Nama</th>
@@ -30,15 +30,15 @@ $data = json_decode($json, true)
 	 <th width='100'>Grade</th>
 
 	<?php $no = 1;
-	foreach ($data as $d ) ; ?>
+	foreach ($data as $d ) : ?>
 	<tr>
 		<td><?= $no; ?></td>
-		<td><?= $d["nama"]; ?> </td>
-		<td><?= $d["tanggal_lahir"]; ?> </td>
-		<td align="center"><?= date('Y') - date('Y', strtotime($d["tanggal_lahir"])); ?></td>
-		<td align="center"><?= $d["alamat"];?> </td>
-		<td align="center"><?= $d["kelas"];?> </td>
-		<td align="center"><?= $d["nilai"];?> </td>
+		<td><?= $d["nama"] ?> </td>
+		<td><?= $d["tanggal_lahir"] ?> </td>
+		<td align="center"><?= date('Y') - date('Y', strtotime($d["tanggal_lahir"])) ?></td>
+		<td align="center"><?= $d["alamat"]?> </td>
+		<td align="center"><?= $d["kelas"]?> </td>
+		<td align="center"><?= $d["nilai"]?> </td>
 
 		<?php if ($d['nilai'] >= 90) : ?>
 			<td align="center">A</td>
@@ -52,7 +52,8 @@ $data = json_decode($json, true)
 			<td align="center">E</td>
 		<?php endif; ?>
 	</tr>
-<?php $no++; ?>
+<?php $no++; 
+;endforeach;?>
 
 </body>
 </html>
