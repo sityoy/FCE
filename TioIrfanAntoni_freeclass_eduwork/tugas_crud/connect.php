@@ -1,6 +1,6 @@
 <?php
 
-use LDAP\Result;
+// use LDAP\Result;
 
 $servername = "localhost";
 $database = "db_perpus";
@@ -8,13 +8,13 @@ $username = "root";
 $pass = "";
 
 // Create Connection
-$conn = mysqli_connect($servername, $username, $pass, $database);
+$mysqli = mysqli_connect($servername, $username, $pass, $database);
 
 // Check Connection
 
-if (!$conn) {
-    die ("Connection Failed : " . mysqli_connect_error());
-}
+// if (!$mysqli) {
+//     die ("Connection Failed : " . mysqli_connect_error());
+// }
 
 // echo "Connect Sukses Baby";
 // mysqli_close($conn);

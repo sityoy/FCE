@@ -53,7 +53,7 @@ $data = json_decode($json, true);
 		<?php endif; ?>
 	</tr>
 <?php $no++; 
-;endforeach;?>
+endforeach;?>
 
 </body>
 </html>
