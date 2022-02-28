@@ -1,77 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nilai PHP</title>
-</head>
-<body>
-<form action="" method="post">
-    <h1>Hitung Nilai AKhir Mahasiswa</h1>
-    
-    Nilai Absen : <br>
-    <input type="text" name="absen"><br>
-
-    Nilai Tugas : <br>
-    <input type="text" name="tugas"><br>
-
-    Nilai UTS : <br>
-    <input type="text" name="uts"><br> 
-
-    Nilai UAS : <br>
-    <input type="text" name="uas"><br><br>
-        
-    <input type="submit" value="Hitung"><br>
-    <b>KALO ERROR TINGGAL ISI</b>
-
-</form>
 <?php
-
-
-$absen  = $_POST['absen'];
-$tugas  = $_POST['tugas'];
-$uts    = $_POST['uts'];
-$uas    = $_POST['uas'];
-
-//menghitung nilai dari yang tadi kita input
-$nilai_absen = $absen * 0.1;
-$nilai_tugas = $tugas * 0.2;
-$nilai_uts   = $uts * 0.3;
-$nilai_uas   = $uas * 0.4;
-
-//penjumlahan dari nilai-nilai yang sudah diinput
-$nilai_akhir = $nilai_absen + $nilai_tugas + $nilai_uts + $nilai_uas;
-
-//menampilkan grade berdasarkan hasil nilai akhir
-if ($nilai_akhir>=80){
-$grade = "A";
-} elseif ($nilai_akhir>=70) {
-$grade = "B";
-} elseif ($nilai_akhir>=50) {
-$grade = "C";
-} elseif ($nilai_akhir>=40) {
-$grade = "D"; 
-} else {
-$grade = "E";
-}
-
-echo "
-<h1>Hitung Nilai AKhir Mahasiswa</h1>
-
-Nilai Absen : <b>$nilai_absen</b><br>
-
-Nilai Tugas : <b>$nilai_tugas</b><br>
-
-Nilai UTS   : <b>$nilai_uts</b><br>
-
-Nilai UAS   : <b>$nilai_uas</b><br>
-
-<h4>Nilai Akhir : $nilai_akhir</h4>
-
-<h4>Grade : $grade</h4>
-";
-
+@$nilai1 = $_POST['nilai1'];
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nilai Grade</title>
+    </head>
+    <body>
+ <center><h3> MASUKKAN NILAI PLISS!!!</h3></center>
+        <form method="POST">
+   <table width="450" border="1" align="center" border color="#0000FF" bgcolor="#F17F1C">
+  
+      <td><strong>Masukkan Nilai Mu</strong></td>
+      <td><input name="nilai1" type="text" value ="<?php echo $nilai1; ?>"/></br></td> 
+      <td><center> <input type="submit" name="submit" value="SUBMIT"/><br/></td></center>
+  </table>
+  <table width="450" border="1" align="center" border color="#0000FF" bgcolor="#ACE72D">
+            <td><center><?php
+            if ($nilai1 == "") {
+                echo "";
+            } else if ($nilai1 >= 0 && $nilai1 <= 70) {
+                echo 'Nilai : ' . $nilai1 . ' <br> Grade = D.  <br> Keterangan = REMEDIAL. ';
+            } else if ($nilai1 >= 70 && $nilai1 <= 80) {
+                echo 'Nilai : ' . $nilai1 . ' <br> Grade = C.  <br> Keterangan = LULUS BERSYARAT. ';
+            } else if ($nilai1 >= 80 && $nilai1 <= 90) {
+                echo 'Nilai : ' . $nilai1 . ' <br> Grade = B.  <br> Keterangan = LULUS. ';
+            } else if ($nilai1 >= 90 && $nilai1 <= 100) {
+                echo 'Nilai : ' . $nilai1 . ' <br> Grade = A.  <br> Keterangan = LULUS. ';
+            }   
+   else{
+                echo 'Nilai : ' . $nilai1 . ' Jangan Suka-Suka Kau Memasukkan Nilai TU.';
+            }
+          ?> </td></center> 
+        </form>
+  </table>
+  <center><span class="copy-text">Copyright &copy; <?= date('Y'); ?> - Tio Iran Antoni</span></center>
     </body>
 </html>

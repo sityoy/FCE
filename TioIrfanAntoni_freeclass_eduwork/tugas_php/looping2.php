@@ -9,19 +9,31 @@
 <body>
 <h2>Data Nilai </h2>
 	<table border='2' width='100%' bgcolor='yellow' cellspacing='1'>
-	 
-	 <th width='5'>No</th>
-	 <th width='100'>Nama</th>
-	 <th width='100'>Tanggal Lahir</th>
-	 <th width='100'>Umur</th>
-	 <th width='100'>Alamat</th>
-	 <th width='100'>Kelas</th>
-	 <th width='100'>Nilai</th>
-	 <th width='100'>Grade</th>
+     
+      <tr>
 
-	<?php $no = 1;
-	 ?>
-	</tr>
+      <?php
+      echo "<tr>
+               <td style='text-align:center'>  No</td>
+               <td style='text-align:center'>  Nama</td>
+               
+               <td style='text-align:center'>  Kelas</td>
+            </tr>";
+
+            echo "<tr>
+            <td>1</td>
+            </tr>";
+            echo "<tr><td>123</td></tr>";
+            echo "<tr>";
+               for ($row = 0; $row <= 3; $row++) {
+                  
+                 echo  "<td> Ini perulangan ke-$row</td>";
+             echo "</tr>";
+               
+      
+      }?> 
+
+<?php $no = 1;?>
 <?php $no++; ?>
    <?php
 echo "<table border='1'><br />";
