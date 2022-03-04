@@ -1,225 +1,73 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--=============== basic  ===============-->
-    <title>EduWork - Platform Mentoring & Penyaluran Kerja</title>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="facebook-domain-verification" content="4pnqmma0x2eem75xzeunk2ox9n6po1" />
-    <!--=============== css  ===============-->
-    <link type="text/css" rel="stylesheet" href="css/style2.css">
-    <link type="text/css" rel="stylesheet" href="css/style5.css">
-    <link type="text/css" rel="stylesheet" href="css/style3.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/style4.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Bootstrap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style4.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
-    <!--=============== favicons ===============-->
-    <link rel="shortcut icon" href="images/favicon.png">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158590099-1"></script>
+    
 </head>
-<body>
-
-<style>
-    .loading { padding: 10px ;  }
-    .header-inner {/* max-width: 1200px ;*/ margin: 0 auto }
-    .notification.error {background: #ff000c; color: #fff; }
-    .notification.error li {list-style-type: none }
-    .invalid { color: red ; }
-    .is-invalid {border: red 1px solid !important}
-    .notification { margin-bottom: 20px; }
-    .btn-action{color: #fff; background: #5ecfb1; padding: 10px; border-radius: 5px}
-    .btn-danger{color: #fff; background: #dc3545; padding: 10px; border-radius: 5px}
-    .badge-success{color: #fff; background: #5ecfb1; padding: 5px; border-radius: 6px; font-weight: bold}
-    .badge-danger{color: #fff; background: #dc3545; padding: 5px; border-radius: 6px; font-weight: bold}
-    .wa {
-        position: fixed;
-        bottom: 25px;
-        right: 10px;
-        z-index: 999;
-        background: #0EBE43;
-        padding: 10px 20px;
-        color: #fff;
-        margin-bottom: 20px;
-        font-size: 20px;
-        border-radius: 50px
-    }
-
-    @media  only screen and (max-width: 600px) {
-        .header-search-select-item {
-            width: 100px;
-        }
-
-        .images-collage-title {
-            top: -60px !important;
-            width: 100%;
-            right: 0
-        }
-
-        .sw-btn.swiper-button-prev {
-            left: 20px;
-        }
-
-        .sw-btn.swiper-button-next {
-            right: 20px;
-        }
-
-        .sw-btn {
-            top: 70%
-        }
-
-        .dashboard-list-box .btn-action {
-            display: block;
-        }
-
-        .wa {
-            width: 100%;
-            right: 0;
-            margin: 0;
-            border-radius: 0;
-            font-size: 15px;
-            bottom: -12px;
-        }
-    }
-
-    .tooltip {
-        display: inline;
-        position: relative;
-    }
-
-    .tooltip:hover:after {
-        background: #333;
-        background: rgba(0, 0, 0, .8);
-        border-radius: 5px;
-        bottom: 26px;
-        color: #fff;
-        content: attr(title);
-        left: 20%;
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 98;
-    }
-
-    .tooltip:hover:before {
-        border: solid;
-        border-color: #333 transparent;
-        border-width: 6px 6px 0 6px;
-        bottom: 20px;
-        content: "";
-        left: 50%;
-        position: absolute;
-        z-index: 99;
-    }
-</style>
-
-<!-- Main  -->
-<div id="main" style="opacity: 1; ">
-    <!-- header-->
-    <!-- <header class="main-header dark-header fs-header sticky"> -->
+<body>  
     <header class="main-header fs-header sticky" style="background-color: #fff">
         <div class="header-inner container">
             <div class="logo-holder">
-                <a href="index.html"><img src="images/logo3.png" alt=""></a>
+                <a href="index.html"><img src="https://eduwork.id/images/logo3.png" alt="" width="250px" style="margin: 20px;"></a>
             </div>
-                            <a class="add-list modal-open hidden-xs btn-auth-nav" style="cursor: pointer">
+                <a class="add-list modal-open hidden-xs btn-auth-nav" style="cursor: pointer">
                     Register <span><i class="fa fa-plus"></i></span>
                 </a>
-
-                <div class="show-reg-form modal-open hidden-xs btn-auth-nav"><i
-                      class="fa fa-sign-in"></i>Sign In</div>
-        
-
-        <!-- nav-button-wrap-->
             <div class="nav-button-wrap color-bg">
                 <div class="nav-button">
                     <span></span><span></span><span></span>
                 </div>
             </div>
-            <!-- nav-button-wrap end-->
-            <!--  navigation -->
-
-            <div class="nav-holder main-menu">
-                <nav>
-                    <ul>
-                        <li> <a href="index.html" class="act-link">Home</a> </li>
-                        <li>
-                            <a href="#" class="">
-                                Kelas
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                            <ul style="width: 300px">
-                                                                                                    <li>
-                                        <a href="#">Private Mentoring </a>                                        
-                                    </li>
-                                                                                                    <li>
-                                        <a href="#">Webinar </a>                                        
-                                    </li>
-                            </ul>
-                        </li>
-                                                    <li class="hidden-lg hidden-md">
-                                <a href="#" class="modal-open" onClick="$('#link-register').click(); $('.tab-login').click()">Sign in</a>
-                            </li>
-                            <li class="hidden-lg hidden-md">
-                                <a href="#" onClick="$('#link-register').click()">Register</a>
-                            </li>    
-                    </ul>
-                </nav>
-            </div>
-            <!-- navigation  end -->
         </div>
+
+        <div class="nav-holder main-menu">
+            <nav>
+                <ul>
+                    <li> <a href="index.html" class="act-link">Home</a> </li>
+                    <li>
+                        <a href="#" class="">
+                            Kelas
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul style="width: 300px">
+                            <li><a href="#">Private Mentoring </a></li>
+                            <li><a href="#">Webinar </a></li>
+                        </ul>
+                    </li>
+                        <li class="hidden-lg hidden-md"><a href="#" class="modal-open" >Sign in</a></li>   
+                </ul>
+            </nav>
+        </div>
+    </div>
     </header>
-    <!--  header end -->
-    <!-- Content-->
-<!-- Content end-->
-    <!-- wrapper -->
 
     <style>
-    
-    .sub-title { font-size: 26px !important }
-    .cs-countdown-item { padding:15px 30px }
+        .sub-title { font-size: 26px !important }
+        .cs-countdown-item { padding:15px 30px }
 
     @media  screen and (min-width: 768px), screen and (min-height: 768px) 
     {
         .hero-section {padding-top: 80px !important; }
         .daftar-button { margin: 0px 0 100px 0 }
-        /*.slider-container .hero-section-wrap {
+        .slider-container .hero-section-wrap {
             padding-top:50px !important;
-        }*/
-    }
-
-    @media  screen and (max-width: 768px) 
-    {
-    
-        /*.hero-section {padding-bottom: 100px !important; }*/
-        .slider-container-wrap {
-            padding: 250px 0 155px;
-            height: unset !important;
         }
 
-        .imagebg { display: none; }
-
-        h3.subdesc {margin-bottom: 10px}
-        .hero-section-wrap { padding-top: 100px !important; }
-
-        h2.sub-title { font-size: 22px !important }
-        #form-pendaftaran { margin-top:10px; }
-        .sw-btn { background-color:rgba(0,0,0,0.5); width: 30px; height: 30px; line-height: 30px; } 
-
-        .slider-container-wrap .sw-btn {
-            margin-top: 0;
-            top: 50% !important ; 
-        }
-        .gray-section { padding-top: 0 !important; }
-    }
-
-    .title_1 { text-align: center }
+    .title_1 {  text-align: center; }
     .title_2 { font-size: 40px !important; text-align: center;  }
 
     .daftar-button 
@@ -228,417 +76,133 @@
         margin-top: 30px
     }
 
-    @media  only screen and (max-width: 540px)
-    {
-        .single-facts .inline-facts-wrap, .team-box, .cs-countdown-item, .list-single-header-contacts li, .list-single-facts .inline-facts-wrap, .listing-features li, .listing-item, .statistic-item-wrap, #progressbar li {
-            width: 50%;
-        }
-
-        .title_1 { font-size: 28px !important; padding-bottom: 10px !important ; text-align: center }
-        .title_2 { font-size: 20px !important; text-align: center; }
-        .daftar-button { text-align: center; margin-top: 0px !important; }
-
-        .title2_1 {font-size: 28px !important; padding-bottom: 0px !important}
     }
+    </style>
 
-    .daftar{color: #fff; padding: 10px 15px; background: #4db7fe; border-radius: 10px;font-size: 20px ;cursor: pointer;}
-    .daftar-sekarang { cursor: pointer; }
-    .phone {border: 1px solid #d6d6d6; background: #f9f9f9; width: 100%; padding: 15px 20px 15px 20px; border-radius: 6px; color: #666; font-size: 13px; -webkit-appearance: none;}
-
-    /*@media  only screen and (max-width: 1324px) {}*/
-    .slider-container .slider-item { display: none;}
-    .slider-container{ background:  #0092FF}
-
-    .slider-container .hero-section-wrap {
-        padding-top:200px;
-    }
-
-
-</style>
-
-<section class="hero-section no-dadding"  id="sec1">
-    <div class="slider-container-wrap fl-wrap">
-        <div class="slider-container">
-            
-
-            <div class="slider-item fl-wrap">
-
-                <div class="overlay"></div>
-                <div class="hero-section-wrap fl-wrap">
-                    <div class="container">
-                        <div class="intro-item fl-wrap" style="padding: 20px">
-                            
-                            <h2 class="title_1">
-                                Raih profesi idamanmu, kami bantu sampai diterima kerja
-                            </h2>
-                            <h3 class="title_2">tanpa biaya pendaftaran !</h3>
-
-                            <div style="clear: both;"></div>
-
-                            <div class="daftar-button">
-                             <a class="add-list modal-open" id=""
-                                style="cursor: pointer; float: unset; font-size: 20px; background: #04436d">
-                                DAFTAR SEKARANG
-                            </a>                                      
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-item fl-wrap">
-
-                <div class="overlay"></div>
-                <div class="hero-section-wrap fl-wrap">
-                    <div class="container">
-                        <div class="intro-item fl-wrap">
-                            <h2 class="title2_1">
-                                Program Pelatihan & Penyaluran ISA, 
-                                bayar nanti setelah berpenghasilan dan bisa dicicil sampai 12x.
-                            </h2>
-                            <div style="clear: both;"></div>
-                            <div style="text-align: center; margin-top: 0px" class="daftar-button">
-                                                               <a class="add-list modal-open" id="link-register" onClick="$('.tab-register').click()"
+    <center>
+    <section class="hero-section no-dadding"  id="sec1">
+        <div class="slider-container-wrap fl-wrap">
+            <div class="slider-container">
+                
+    
+                <div class="slider-item fl-wrap">
+    
+                    <div class="overlay"></div>
+                    <div class="hero-section-wrap fl-wrap">
+                        <div class="container">
+                            <div class="intro-item fl-wrap" style="padding: 20px">
+                                
+                                <h2 class="title_1">
+                                    Raih profesi idamanmu, kami bantu sampai diterima kerja
+                                </h2>
+                                <h3 class="title_2">tanpa biaya pendaftaran !</h3>
+    
+                                <div style="clear: both;"></div>
+    
+                                <div class="daftar-button">
+                                 <a class="add-list modal-open" id=""
                                     style="cursor: pointer; float: unset; font-size: 20px; background: #04436d">
-                                    DAFTAR SEKARANG</span>
-                                </a>
+                                    DAFTAR SEKARANG
+                                </a>                                      
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="swiper-button-prev sw-btn"><i class="fa fa-long-arrow-left"></i></div>
-        <div class="swiper-button-next sw-btn"><i class="fa fa-long-arrow-right"></i></div>
-    </div>
-</section>
-    <style type="text/css">
+        </center>
         
-        .features-box 
-        {
-            margin:20px 0 20px 0;
-        }
-        .features-box p { font-size: 16px; }
-        .ft {     font-size: 30px; color: #4db7fe; font-weight: bold; text-align: left; }
-
-        @media  screen and (max-width: 768px)
-        {
-            .slider-container-wrap .sw-btn {
-                margin-top: 0;
-                top: 80% !important;
+        <style type="text/css">
+        
+            .features-box 
+            {
+                margin:10px 0 20px 0;
             }
+            .features-box p { font-size: 16px; }
+            .ft {     font-size: 30px; color: #4db7fe; font-weight: bold; text-align: left; }
+    
+            @media  screen and (max-width: 768px)
+            {
+                .slider-container-wrap .sw-btn {
+                    margin-top: 1px;
+                    top: 80% !important;
+                }
+    
+                .ft { padding: 20px !important; text-align: center; } 
+            }
+    
+            .iframe-container{
+              position: relative;
+              width: 200%;
+              padding-bottom: 56.25%; 
+              height: 0;
+            }
+            .iframe-container iframe{
+              position: absolute;
+              top:0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+    
+        </style>
 
-            .ft { padding: 20px !important; text-align: center; } 
-        }
-
-        .iframe-container{
-          position: relative;
-          width: 100%;
-          padding-bottom: 56.25%; 
-          height: 0;
-        }
-        .iframe-container iframe{
-          position: absolute;
-          top:0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-
-    </style>
-
-    <div class="wa">
-        <a style="margin-left: 0 ; color: #fff" href="https://api.whatsapp.com/send?phone=628886669969&amp;text=halo">
-            <span class="">Tanya ?</span>
-            <i class="fa fa-whatsapp"></i> &nbsp 0888-6669-969
-        </a>
-    </div>
-
-    <div class="content">
-        <section style="padding-top: 50px  ">
-            <div class="container wraper-support-button">
-                <div class="elementor-row" style="flex-wrap: wrap; display: flex;">
-                    <div class="features-box col-md-4">
-                        <div class="time-line-icon">
-                            <i class="fa fa-television"></i>
+    
+        <div class="content">
+            <section style="padding-top: 1px  ">
+                <div class="container wraper-support-button">
+                    <div class="elementor-row" style="flex-wrap: wrap; display: flex;">
+                        <div class="features-box col-md-4">
+                            <div class="time-line-icon">
+                                <i class="bi bi-tv"></i>
+                            </div>
+                            <h3>Apa sih eduwork itu?</h3>
+                            <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
                         </div>
-                        <h3>Apa sih eduwork itu?</h3>
-                        <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
-                    </div>
-
-                    <div class="features-box col-md-4">
-                        <div class="time-line-icon">
-                            <i class="fa fa-television"></i>
+    
+                        <div class="features-box col-md-4">
+                            <div class="time-line-icon">
+                                <i class="bi bi-tv"></i>
+                            </div>
+                            <h3>Program ISA</h3>
+                            <p>Dengan program Income Sharing Agreement, kamu bisa fokus belajar dulu, bayarnya nanti setelah mendapatkan kerja / penghasilan. </p>
                         </div>
-                        <h3>Program ISA</h3>
-                        <p>Dengan program Income Sharing Agreement, kamu bisa fokus belajar dulu, bayarnya nanti setelah mendapatkan kerja / penghasilan. </p>
-                    </div>
-
-                    <div class="features-box col-md-4">
-                        <div class="time-line-icon">
-                            <i class="fa fa-user"></i>
+    
+                        <div class="features-box col-md-4">
+                            <div class="time-line-icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <h3>Berbagai Mentor</h3>
+                            <p>Ada berbagai mentor / kelas yang tersedia berbagai bidang. Pilih mentor atau bidang yang kalian inginkan. Dan kejar pekerjaan idaman kalian !</p>
                         </div>
-                        <h3>Berbagai Mentor</h3>
-                        <p>Ada berbagai mentor / kelas yang tersedia berbagai bidang. Pilih mentor atau bidang yang kalian inginkan. Dan kejar pekerjaan idaman kalian !</p>
+                        
+                        <div class="features-box col-md-4">
+                            <div class="time-line-icon">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                            <h3>Penyaluran kerja</h3>
+                            <p>Setelah lulus kamu akan dibantu untuk mendapatkan pekerjaan sesuai dengan ilmu yang kalian pelajari. </p>
+                        </div>
+                        <div class="features-box col-md-4">
+                            <div class="time-line-icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <h3>Ilmu Praktis</h3>
+                            <p>Dibimbing oleh mentor yang berpengalaman di dunia industri, jadi belajar praktek praktis, bukan sebatas teori akademik!</p>
+                        </div>
+                        <div class="features-box col-md-4">
+                            <div class="time-line-icon">
+                                <i class="fa fa-television"></i>
+                            </div>
+                            <h3>Flexible Intensif</h3>
+                            <p>Bisa secara Online atau Offline, diskusikan & sepakati saja semuanya dengan mentormu !</p>
+                        </div>
+                        <div style="clear: both;"></div>
                     </div>
                     
-                    <div class="features-box col-md-4">
-                        <div class="time-line-icon">
-                            <i class="fa fa-cogs"></i>
-                        </div>
-                        <h3>Penyaluran kerja</h3>
-                        <p>Setelah lulus kamu akan dibantu untuk mendapatkan pekerjaan sesuai dengan ilmu yang kalian pelajari. </p>
-                    </div>
-                    <div class="features-box col-md-4">
-                        <div class="time-line-icon">
-                            <i class="fa fa-user"></i>
-                        </div>
-                        <h3>Ilmu Praktis</h3>
-                        <p>Dibimbing oleh mentor yang berpengalaman di dunia industri, jadi belajar praktek praktis, bukan sebatas teori akademik!</p>
-                    </div>
-                    <div class="features-box col-md-4">
-                        <div class="time-line-icon">
-                            <i class="fa fa-television"></i>
-                        </div>
-                        <h3>Flexible Intensif</h3>
-                        <p>Bisa secara Online atau Offline, diskusikan & sepakati saja semuanya dengan mentormu !</p>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-                
-
-            </div>
-        </section>
-    </div>
-
-    <style type="text/css">
-        #tahapan h3 { color: #fff ; font-size: 30px ; margin-bottom: -15px }
-        #tahapan p, #tahapan i { color: #fff !important }
-        #tahapan .time-line-icon { font-size: 50px; color: #fff; background: none ; border: solid 1px #fff; border-radius: 50%; }
-        #tahapan .shapes-bg-big:before { background-image: none }
-        #tahapan .features-box { margin:0 0 50px 0}
-        #tahapan .section-subtitle {opacity: 0}
-        
-        section#tahapan { padding-bottom: 300px; }
-        .women { position: absolute; z-index: -1; margin-top: -150px }
-        
-      
-    </style>
     
-    <!--register form -->
-    <style type="text/css">
-        .invalid-feedback {
-            background: red;
-            color: #fff
-        }
-
-        .login-register input {
-            float: none !important;
-            margin-bottom: 0
-        }
-
-        .login-register label {
-            margin-top: 20px
-        }
-
-        .tabs-menu li a {
-            padding: 15px
-        }
-
-        .tabs-menu {
-            margin-top: 0
-        }
-
-        .tab-content {
-            padding: 0 !important
-        }
-    </style>
-        <div class="main-register-wrap modal reg-modal">
-        <div class="main-overlay"></div>
-        <div class="main-register-holder">
-            <div class="main-register fl-wrap">
-                <div class="close-reg"><i class="fa fa-times"></i></div>
-                <h3>Sign In <span>Edu<strong>Work</strong></span></h3>
-                <div class="soc-log fl-wrap">
-                    <p>For faster login or register use your social account.</p>
-                    <a href="https://www.facebook.com/v3.3/dialog/oauth?client_id=370082784347152&amp;redirect_uri=https%3A%2F%2Feduwork.id%2Fsocial%2Fhandle%2Ffacebook&amp;scope=email&amp;response_type=code&amp;state=WO7BfXlnrJAQrb2gGOJYr6nL9bE0ujqspDg03940"
-                       class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with Facebook</a>
-                    <a href="https://accounts.google.com/o/oauth2/auth?client_id=43683104316-9f9j6jkcgqob6s14gm43r21vddd7ep4f.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Feduwork.id%2Fsocial%2Fhandle%2Fgoogle&amp;scope=openid+profile+email&amp;response_type=code&amp;state=Sd0OKBlJa98bnY3aVM9Tvn4zLMWe7Bwygo7JVGl1"
-                       class="google-log"><i class="fa fa-google"></i> Log in with Google</a>
                 </div>
-                <div class="log-separator fl-wrap"><span>or</span></div>
-                <div id="tabs-container" style="margin-top: 0">
-                    <ul class="tabs-menu">
-                        <li class="current"><a href="#tab-1" class="tab-login">Login</a></li>
-                        <li><a href="#tab-2" class="tab-register">Register</a></li>
-                        <li class="link_register_mentor"><a href="#">Register Mentor</a></li>
-                    </ul>
-                    <div class="tab">
-                        <div id="tab-1" class="tab-content">
-                            <div class="custom-form login-register">
-                                <form method="post" name="registerform" class="form-auth-modal"
-                                      action="">
-
-                                    <input type="hidden" name="type" value="login">
-
-                                    <label>Email Address * </label>
-                                    <input name="email" required type="text" onClick="this.select()" value="">
-                                    
-                                    <label>Password * </label>
-                                    <input name="password" required type="password" onClick="this.select()" value="">
-                                    
-                                    <button type="submit" class="log-submit-btn"><span>Log In</span></button>
-
-                                    <div class="clearfix"></div>
-                                    <div class="filter-tags">
-
-                                        <input class="form-check-input" type="checkbox" name="remember"
-                                               id="remember" >
-
-                                        <label class="form-check-label" for="remember"
-                                               style="margin-top: 0">Remember Me</label>
-
-                                    </div>
-                                </form>
-                                <div class="lost_password">
-                                    <a href="password/reset.html">Lost Your Password?</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab">
-                            <div id="tab-2" class="tab-content" style="padding-top: 0">
-                                <div class="custom-form login-register">
-                                    <form method="post" class="form-auth-modal"
-                                          action=""
-                                          name="registerform" class="main-register-form" id="main-register-form2">
-
-                                        <input type="hidden" name="type" value="register">
-
-                                        <input type="hidden" name="_token" value="JcTBTiX63r7Lgf5LuDY7OybLHa60wN16DjeE75ry">                                        <label>Name * </label>
-                                        <input name="name" required minlength="4"
-                                               type="text" onClick="this.select()"
-                                               value="">
-
-                                        
-                                        <label>Username * </label>
-                                        <input name="nickname" required minlength="4"
-                                               type="text" onClick="this.select()"
-                                               value="">
-
-                                        
-                                        <label>Phone * </label>
-                                        <input name="phone" required
-                                               type="number" style="padding-left: 20px" onClick="this.select()"
-                                               value="">
-
-                                        
-                                        <label>Email Address *</label>
-                                        <input name="email" required
-                                               type="text" onClick="this.select()"
-                                               value="">
-                                        
-                                        <label>Password *</label>
-                                        <input name="password" required minlength="8"
-                                               type="password" onClick="this.select()" value="">
-                                        
-                                        <label>Password Confirmation *</label>
-                                        <input name="password_confirmation"
-                                               required minlength="8"
-                                               type="password" onClick="this.select()"
-                                               value="">
-
-
-                                        <label>Register as * </label>
-                                        <div id="level" class="row" style="padding-bottom: 15px">
-
-                                            <div class="col-md-4">
-                                                <div class="add-list-media-header" style="padding-top: 0">
-                                                    <label class="radio inline">
-                                                        <input type="radio" required name="level" value="student" checked
-                                                          >
-                                                        <span>Student</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-
-                                        <!-- <div class="col-md-4">
-                                                    <div class="add-list-media-header" style="padding-top: 0">
-                                                        <label class="radio inline">
-                                                            <input type="radio" name="level" value="company"
-                                                                >
-                                                            <span>Company</span>
-                                                        </label>
-                                                    </div>
-                                                </div> -->
-
-                                        </div>
-                                        
-                                        <style>
-                                            .checkbox-company {
-                                                display: flex;
-                                                justify-content: flex-end;
-                                                align-items: center;
-                                            }
-
-                                            .checkbox-company label {
-                                                width: max-content;
-                                            }
-
-                                            .checkbox-company input {
-                                                margin-top: 10px;
-                                                margin-left: 12px;
-                                            }
-                                        </style>
-
-                                        <!-- <div class="checkbox-company">
-                                            <label for="company">Are you a company?</label>
-                                            <input id="company" type="checkbox" name="company" value="company">
-                                        </div> -->
-
-                                        <button type="submit" class="log-submit-btn"><span>Register</span></button>
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        <!--register form end -->
-    <!-- <a class="to-top"><i class="fa fa-angle-up"></i></a> -->
-</div>
-<!-- Main end -->
-<!--=============== scripts  ===============-->
-
-
-<script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo&amp;libraries=places&amp;callback=initAutocomplete"></script> -->
-<script>
-    $(document).ready(function() {
-        $('ul[style*="min-width: 300px"]').css('min-width', '0')
-        $('ul[style*="width: 300px"]').css('min-width', '0')
-
-        let queryDict = {}
-        location.search.substr(1).split('&').forEach(function(item) {queryDict[item.split('=')[0]] = item.split('=')[1]})
-
-        if(queryDict.appreciation !== '' && queryDict.appreciation.length > 0){
-            $('.reg-modal').show()
-        }
-    })
-</script>
+            </section>
 </body>
 </html>
