@@ -51,11 +51,7 @@ p {
 	opacity:0.75;
 	z-index:2
 }
-a
-{
-	position: relative; 
-	color:#000;
-}
+
 /* ------Header------------------------------------------------------------ */
 .main-header {
 	position:fixed;
